@@ -38,6 +38,8 @@
  * holder.
  */
 
+import servlet.TestClass;
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -49,9 +51,10 @@ public class TransformToJson extends HttpServlet {
             throws IOException, ServletException {
 
         String parameter = req.getParameter("parameter");
+        TestClass testClass = new TestClass();
+        testClass.setParameter(parameter);
 
         Jsonb jsonb = JsonbBuilder.create();
-        //resp.getWriter().println(jsonb.fromJson("{\"parameter\":\"" + parameter + "\"}", User.class).name);
-        resp.getWriter().println("{\"parameter\":\"" + parameter + "\"}");
+        resp.getWriter().println(jsonb.toJson(testClass));
     }
 }

@@ -79,7 +79,7 @@
         </antcall>
 
         <javac srcdir="." classpath="${env.APS_HOME}/lib/reportbuilder.jar"
-               includes="WebTest*"/>
+               includes="YassonTest*"/>
     </target> 
     
     <target name="enable-access-logging" depends="init-common">
