@@ -58,7 +58,7 @@ public class YassonTest {
 
     private static final String PARAMETER = "TestParam";
 
-    private static final String EXPECTED = "\"{\"parameter\":\"" + PARAMETER + "\"}\"";
+    private static final String EXPECTED = "{\"parameter\":\"" + PARAMETER + "\"}";
 
     private String host;
     private String port;
